@@ -29,7 +29,7 @@ const CartProvider = ({ children }) => {
     }
   };
   const removeFromCart = (productId) => {
-    setCart(cart.filter((item) => item.product.id === productId));
+    setCart(cart.filter((item) => item.product.id !== productId));
   };
 
   const increaseQuantity = (productId) => {
