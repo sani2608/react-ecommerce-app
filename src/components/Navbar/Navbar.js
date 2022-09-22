@@ -36,7 +36,7 @@ const Navbar = ({ onSearch, cartItemCount }) => {
               </form>
             </div>
             <Link to="/cart" className="link headerCart">
-              <img className="cartImg" src="/cart.svg" alt="cart-icon"/>
+              <img className="cartImg" src="/cart.svg" alt="cartn"/>
               {cartItemCount > 0 && (
                 <div className="cartCounter">
                   {cartItemCount <= 9 ? cartItemCount : "9+"}

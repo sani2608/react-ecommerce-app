@@ -26,7 +26,7 @@ const Cart = () => {
                 <div className="item" key={item.product.id}>
                   <div className="grid py-3">
                     <div className="itemImage">
-                      <img src={item.product.image} alt="product-img" />
+                      <img src={item.product.image} alt="product" />
                     </div>
                     <div className="itemDesc">
                       <div className="title">
