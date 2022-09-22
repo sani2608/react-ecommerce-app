@@ -6,7 +6,7 @@ const Item = ({ data, addToCart }) => {
     <div className="card">
       <div className="grid-3">
         <div className="image">
-          <img src={image} alt=""/>
+          <img src={image} alt="item-image"/>
         </div>
 
         <div className="title">
@@ -20,7 +20,7 @@ const Item = ({ data, addToCart }) => {
             ${price}
           </span>
           <div className="cart" onClick={addToCart}>
-            <img className="cartImg" src="/cart.svg" alt="" />
+            <img className="cartImg" src="/cart.svg" alt="cart-icon" />
           </div>
         </div>
 
