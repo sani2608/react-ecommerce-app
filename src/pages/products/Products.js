@@ -8,7 +8,7 @@ import { useCart } from "../../context/cart";
 const Products = () => {
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([]);
-  const [query, setQuery] = useSearchParams();
+  const [query] = useSearchParams();
 
   const { addToCart } = useCart();
   const searchQuery = query.get("q");
