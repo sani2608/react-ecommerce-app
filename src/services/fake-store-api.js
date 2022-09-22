@@ -1,18 +1,25 @@
 const FakeStoreApi = {
   fetchAllProducts: async () => {
-    const res = await fetch("https://fakstoreapi.com/products");
+    const res = await fetch("https://fakestoreapi.com/products");
     const result = await res.json();
     return result;
   },
   fetchProductById: async (productId) => {
-    const res = await fetch(`https://fakstoreapi.com/product/${productId}`);
-    const result = await res.json();
+    let result;
+    try {
+      const res = await fetch(`https://fakestoreapi.com/products/${productId}`);
+      result = await res.json();
+    } catch (error) {
+      throw new Error("product not found");
+    }
     return result;
   },
   fetchProductsBySearchQuery: async (query) => {
-    const res = await fetch("https://fakstoreapi.com/products");
+    const res = await fetch("https://fakestoreapi.com/products");
     const result = await res.json();
-    return result.filter((product) => product.title.toLowerCase().includes(query));
+    return result.filter((product) =>
+      product.title.toLowerCase().includes(query.toLowerCase())
+    );
   },
 };
 
